@@ -10,9 +10,7 @@ export default {
       'disabled',
     ],
   },
-  triggerEvents: [
-    { name: 'click', label: { en: 'On click' }, event: {}, default: true },
-  ],
+  triggerEvents: [],
   properties: {
     label: {
       label: { en: 'Label' },

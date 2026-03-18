@@ -10,7 +10,6 @@
         :disabled="props.content?.disabled"
         unstyled
         :pt="passthrough"
-        @click="handleClick"
       />
     </div>
   </div>
@@ -33,17 +32,12 @@ export default {
     wwEditorState: { type: Object, required: true },
     /* wwEditor:end */
   },
-  emits: ['trigger-event'],
-  setup(props, { emit }) {
+  setup(props) {
     installPrimeVue();
 
     const passthrough = {
       root: { class: 'pv-button__root' },
       label: { class: 'pv-button__label' },
-    };
-
-    const handleClick = () => {
-      emit('trigger-event', { name: 'click', event: {} });
     };
 
     const severityColors = {
@@ -120,7 +114,7 @@ export default {
       return vars;
     });
 
-    return { props, passthrough, handleClick, cssVars };
+    return { props, passthrough, cssVars };
   },
 };
 </script>
