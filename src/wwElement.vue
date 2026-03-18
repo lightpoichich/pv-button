@@ -125,11 +125,14 @@ export default {
 
 .pv-button {
   &__inner {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
   }
 
   &__root {
     @include pv-btn-base;
+    width: 100%;
     background-color: var(--btn-bg);
     color: var(--btn-text);
     border: var(--btn-border, none);
