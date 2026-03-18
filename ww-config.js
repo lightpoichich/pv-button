@@ -62,12 +62,26 @@ export default {
         ],
       },
       defaultValue: 'filled',
+      bindable: true,
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'Button variant: filled | outlined | text',
+      },
+      /* wwEditor:end */
     },
     rounded: {
       label: { en: 'Rounded' },
       type: 'OnOff',
       section: 'settings',
       defaultValue: false,
+      bindable: true,
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'boolean',
+        tooltip: 'A boolean for pill-shaped corners: true | false',
+      },
+      /* wwEditor:end */
     },
     disabled: {
       label: { en: 'Disabled' },
